@@ -122,14 +122,40 @@ Server TODO:
                 </div>
 
                 <div class="narrow-wrapper">
-                    <p>Our process is simple:</p>
+                    <p><i>Our process is simple.</i></p>
                     <!-- Complete rubbish -->
-                    <ul>
-                        <li>Create a virtual 3D model.</li>
-                        <li>Use advanced 3D printing for the physical model.</li>
-                        <li>Render the model's colours by hand.</li>
-                        <li>Assemble the model and terrain.</li>
-                        <li>Send it to you, fully assembled.</li>
+                    <ul class="process-list">
+                        <li class="left">
+                            <div class="label-text left">
+                                <h2>Model</h2>
+                                <p>Some example text explaining what this step actually means.</p>
+                            </div>
+                            <div><img src="./img/process/1.jpg"></div>
+                        </li>
+                        <hr>
+                        <li class="right">
+                            <div><img src="./img/process/1.jpg"></div>
+                            <div class="label-text right">
+                                <h2>Manufacture</h2>
+                                <p>Some example text explaining what this step actually means.</p>
+                            </div>
+                        </li>
+                        <hr>
+                        <li class="left">
+                            <div class="label-text left">
+                                <h2>Render</h2>
+                                <p>Some example text explaining what this step actually means.</p>
+                            </div>
+                            <div><img src="./img/process/1.jpg"></div>
+                        </li>
+                        <hr>
+                        <li class="right">
+                            <div><img src="./img/process/1.jpg"></div>
+                            <div class="label-text right">
+                                <h2>Assemble</h2>
+                                <p>Some example text explaining what this step actually means.</p>
+                            </div>
+                        </li>
                     </ul>
                     <p>
                         You won’t find models like ours anywhere else.
@@ -536,7 +562,7 @@ Server TODO:
                     <div class="contact-block center-margin">
                         <div class="contact-group">
                             <div class="icon icon-mail-b" style="font-size: 17pt;"></div>
-                            <div class="contact-info"><a href='m&#97;&#105;lto&#58;e&#110;&#113;uiri&#101;s%&#52;0%68&#115;ar&#99;&#104;&#37;69%74ectu&#114;a&#108;&#46;co%6D&#46;a%75'>en&#113;ui&#114;&#105;&#101;s&#64;hsa&#114;ch&#105;t&#101;&#99;&#116;ur&#97;l&#46;&#99;om&#46;au</a></div>
+                            <div class="contact-info"><a href='mailto&#58;&#101;nq&#37;75iries&#64;%68%6&#53;rikandsto%&#55;2ey&#46;%&#54;&#51;o%&#54;D'>&#101;nquiries&#64;her&#105;&#107;andst&#111;&#114;ey&#46;c&#111;m</a></div>
                         </div>
                         <div class="contact-group">
                             <div class="icon icon-phone2" style="font-size: 16pt;"></div>
@@ -555,12 +581,15 @@ Server TODO:
                         <h1>Request a Quote</h1>
                         <span>Let us realise your designs</span>
                     </div>
+
                     <noscript>
                         <small>This won't work. Send us an email, or enable JavaScript.</small>
                     </noscript>
-                    <form action="forms/quote-req.php" method="POST" id="request-quote">
+                    <form action="https://formspree.io/&#101;nquiries&#64;her&#105;&#107;andst&#111;&#114;ey&#46;c&#111;m" method="POST" id="request-quote">
                         <input type="text" required="true" name="name" placeholder="Company Name">
-                        <input type="email" required="true" name="email" placeholder="Email">
+                        <input type="email" required="true" name="_replyto" placeholder="Email">
+                        <input type="hidden" name="_next" value="./"/>
+                        <input type="text" name="_gotcha" style="display:none"/>
                         <p class="subheading" style="width: 60%;">We will send you a form with further instructions for selecting your desired features, and sending us the files we need.</p>
                         <button class="form-btn" type="submit">Send</button>
                     </form>
