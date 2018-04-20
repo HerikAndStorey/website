@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html>
+<!-- TODO:
+
+*DONE: Fix the tab key messing everything up
+*DONE: Stop the scrolling from going past the page end
+
+Server TODO:
+
+* For email, after validating input and returning a "success" or "fail"
+  message, need to track IP address and stop it from sending more than 20 emails in a day. (spam protection)
+* Need the server to google the company name and return possible results - only for logging purposes
+
+-->
+<head>
+    <title>H&amp;S Aʀᴄʜɪᴛᴇᴄᴛᴜʀᴀʟ</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/icons.css" type="text/css"/>
+    <link rel="stylesheet" href="./css/primary.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento|Dancing+Script" rel="stylesheet">
+
+    <!-- Abandon all hope yee whom enter here -->
+    <link rel="icon" type="image/png" href="./img/favicon/favicon.ico" sizes="32x32" />
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+</head>
+
+<body>
+
+    <!-- State Controller -->
+    <input type="radio" name="navbar-select" id="navbar-1" checked>
+    <input type="radio" name="navbar-select" id="navbar-2">
+    <input type="radio" name="navbar-select" id="navbar-3">
+    <input type="radio" name="navbar-select" id="navbar-4">
+
+    <div id="header">
+        <img id="logo_img_white" src="./img/white-hs-logo-main.png">
+    </div>
+
+    <div id="wrapper">
+
+        <div id="navbar">
+            <div id="navbar-inner">
+                <label for="navbar-1">Home</label>
+
+                <label for="navbar-2">Pricing</label>
+
+                <label for="navbar-3">Who We Are</label>
+
+                <label for="navbar-4">Contact</label>
+
+                <!-- The lil liney boi -->
+                <div id="navbar-indicator"></div>
+            </div>
+        </div>
+
+        <!-- If a company isn't using JavaScript, we must show them the light! -->
+        <noscript>
+        Javascript is disabled. Some features of the site may not work correctly.
+        </noscript>
+
+        <!--
+            Body panels will be slid into/out-of position by javascript.
+            If there is no javascript (or the script has thrown an exception),
+            then no animation will be possible, but the panels will still toggle.
+        -->
+        <div id="body-panel-wrapper" nojs>
+
+            <!-- The "...-nojs" classes will be changed by javascript on load. -->
+            <div class="body-panel" id="body-panel-1">
+                <!-- Home -->
+                <img id="body_img" src="./img/img-002-nobgforreal-small.png">
+
+                <div class="narrow-wrapper">
+                    <p>
+                        Herik &amp; Storey Architectural Modelling makes advanced project visualisation models.
+                        We are your key to exploring both the inside and outside of a structure,
+                        up close and personal, before everything is set in stone.
+                    </p>
+                    <p>
+                        Our mission, is to provide enhanced design feedback
+                        for architects and clients alike.
+                    </p>
+                    <p>
+                        Architecture is a process of design and revision. <br> <!-- Proper use of <br> :P -->
+                        We bring these two steps to life, at a scale that remains effective, and economical.
+                    </p>
+                </div>
+
+                <div class="wide-wrapper v-space" style="border: 1px solid red; padding: 200px 0;">
+                    An image of something we've made - eye catching and impressive.
+                </div>
+
+                <div class="narrow-wrapper">
+                    <p>
+                        The models we make incorporate our hallmark modular design, detailed furnishings, and a wide variety of colouring schemes for realism or feature highlighting.
+                    </p>
+                </div>
+
+                <div class="wide-wrapper v-space" style="border: 1px solid red; padding: 200px 0;">
+                    An image of something we've made - showing modularity and colours.
+                </div>
+
+                <div class="narrow-wrapper">
+                    <p>Our process is simple:</p>
+                    <!-- Complete rubbish -->
+                    <ul>
+                        <li>Create a virtual 3D model.</li>
+                        <li>Use advanced 3D printing for the physical model.</li>
+                        <li>Render the model's colours by hand.</li>
+                        <li>Assemble the model and terrain.</li>
+                        <li>Send it to you, fully assembled.</li>
+                    </ul>
+                    <p>
+                        You won’t find models like ours anywhere else.
+                    </p>
+                    <div class="v-space">
+                        <noscript>
+                        <small>This won't work.</small>
+                        </noscript>
+                        <button class="cta-btn" onclick="setPanel('navbar-2');">Get Started</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="body-panel" id="body-panel-2">
+                <!-- Pricing -->
+                <div class="narrow-wrapper">
+                    <p>
+                        Each package is suited for a different purpose. Whether you're getting
+                        a feel for the design or need a display in the CEO's spacious office, we have
+                        the options you need.
+                    </p>
+                    <p>
+                        <b>Actual cost may be more or less than the indicated price.</b><br>
+                        Please contact us for a proper quote.
+                    </p>
+                    <p class="subheading">
+                        The prices below are for a 4 storey building with one underground level and standard feature density. <br>
+                        Final price depends on building size, availability of an existing 3D model, and number of internal features.<br>
+                        Note that price <i>does not</i> scale by one metric (e.g. number of storeys).
+                    </p>
+                </div>
+                <!-- Must stick to these packages. The only variable feature is the level of detail. -->
+                <div id="price-table" class="normal-wrapper">
+                    <div class="price-listing">
+                        <div class="package-name">Prototype</div>
+                        <div class="package-price">$2,500</div>
+                        <ul class="package-features">
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-1a">
+                                <label for="package-info-1a">Size A*</label>
+                                <div class="package-info">
+                                    Building footprint limits: 300&times;300.<br>
+                                    Building height limit: 600.
+                                    No terrain.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-2a">
+                                <label for="package-info-2a">Quick</label>
+                                <div class="package-info">Approximate lead time of 2 weeks.</div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-3a">
+                                <label for="package-info-3a">Good Detail</label>
+                                <div class="package-info">
+                                    A good resolution model, with detailing such as transparent windows and windowsills.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-4a">
+                                <label for="package-info-4a">Modular</label>
+                                <div class="package-info">
+                                    The roof and floors fit together and can be taken apart to view the inside of the structure.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-5a">
+                                <label for="package-info-5a">People</label>
+                                <div class="package-info">
+                                    Two people models included (for scale).
+                                </div>
+                            </li>
+                            <li class="cross">
+                                <input type="checkbox" id="package-info-6a">
+                                <label for="package-info-6a">Furniture</label>
+                                <div class="package-info">
+                                    No miniature furnishings included.
+                                </div>
+                            </li>
+                            <li class="cross">
+                                <input type="checkbox" id="package-info-7a">
+                                <label for="package-info-7a">Nature</label>
+                                <div class="package-info">
+                                    No miniature nature details included (e.g. trees, bushes, grass and hedges).
+                                </div>
+                            </li>
+                            <li class="cross">
+                                <input type="checkbox" id="package-info-8a">
+                                <label for="package-info-8a">Terrain</label>
+                                <div class="package-info">
+                                    No high-density foam topological model is included.
+                                </div>
+                            </li>
+                        </ul>
+                        <span class="subheading left-align">*<span class="click-tap">Click</span> for more info<br>All units in mm.</span>
+                    </div>
+                    <div class="price-listing large">
+                        <div class="package-name compressed">
+                            Preliminary <br>
+                            <span class="subheading">(Best Value)</span>
+                        </div>
+                        <div class="package-price">$8,000</div>
+                        <ul class="package-features">
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-1b">
+                                <label for="package-info-1b">Size B</label>
+                                <div class="package-info">
+                                    Building footprint limits: 500&times;500. <br>
+                                    Building height limit: 800.<br>
+                                    No terrain.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-2b">
+                                <label for="package-info-2b">Colorised</label>
+                                <div class="package-info">
+                                    Once made, the model is painted. See table 1 below.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-3b">
+                                <label for="package-info-3b">High Detail</label>
+                                <div class="package-info">
+                                    A high resolution model with details such as door jambs, basic ceiling light fixtures and furnishings (tables, chairs, benches, sinks, beds).<br>
+                                    Contact us to arrange Ultra Detail (additional charges will apply).
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-4b">
+                                <label for="package-info-4b">Modular</label>
+                                <div class="package-info">
+                                    The roof and floors fit together and can be taken apart to view the inside of the structure.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-5b">
+                                <label for="package-info-5b">People</label>
+                                <div class="package-info">
+                                    Some people included (for scale). Optional.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-6b">
+                                <label for="package-info-6b">Furniture</label>
+                                <div class="package-info">
+                                    Some miniature furniture models included (depends on level of detail).
+                                </div>
+                            </li>
+                            <li class="cross">
+                                <input type="checkbox" id="package-info-7b">
+                                <label for="package-info-7b">Nature</label>
+                                <div class="package-info">
+                                    No nature detailing included.
+                                </div>
+                            </li>
+                            <li class="cross">
+                                <input type="checkbox" id="package-info-8b">
+                                <label for="package-info-8b">Terrain</label>
+                                <div class="package-info">
+                                    No high-density foam topological model included.
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="overshoot"></div>
+                    </div>
+                    <div class="price-listing">
+                        <div class="package-name">Presentation</div>
+                        <div class="package-price">$16,000</div>
+                        <ul class="package-features">
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-1c">
+                                <label for="package-info-1c">Size B</label>
+                                <div class="package-info">
+                                    Building footprint limits: 500&times;500. <br>
+                                    Building height limit: 800.<br>
+                                    Terrain footprint limit: 700&times;700.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-2c">
+                                <label for="package-info-2c">Colorised</label>
+                                <div class="package-info">
+                                    Once made, the model is painted. See table 1 below.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-3c">
+                                <label for="package-info-3c">High Detail</label>
+                                <div class="package-info">
+                                    A high resolution model with details such as door jambs, basic ceiling light fixtures and furnishings (tables, chairs, benches, sinks, beds).<br>
+                                    Contact us to arrange Ultra Detail (additional charges will apply).
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-4c">
+                                <label for="package-info-4c">Modular</label>
+                                <div class="package-info">
+                                    The roof and floors fit together and can be taken apart to view the inside of the structure.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-5c">
+                                <label for="package-info-5c">People</label>
+                                <div class="package-info">
+                                    People models included. Optional.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-6c">
+                                <label for="package-info-6c">Furniture</label>
+                                <div class="package-info">
+                                    Some miniature furniture models included (depends on level of detail).
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-7c">
+                                <label for="package-info-7c">Nature</label>
+                                <div class="package-info">
+                                    Some nature detailing included (depends on level of detail).
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-8c">
+                                <label for="package-info-8c">Terrain</label>
+                                <div class="package-info">
+                                    A detailed high-density foam terrain model based on topographic maps provided to us, including recesses for placement of buildings.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="price-listing gold">
+                        <div class="package-name">Display</div>
+                        <div class="package-price">$26,000</div>
+                        <ul class="package-features">
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-1d">
+                                <label for="package-info-1d">Size C</label>
+                                <div class="package-info">
+                                    Building footprint limits: 900&times;900. <br>
+                                    Building height limit: 1200. <br>
+                                    Terrain footprint limit: 1200&times;1200.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-2d">
+                                <label for="package-info-2d">Colorised</label>
+                                <div class="package-info">
+                                    Once made, the model is painted. See table 1 below.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-3d">
+                                <label for="package-info-3d">Ultra Detail</label>
+                                <div class="package-info">
+                                    A very high resolution model including details such as light switches, electrical/gas outlets and variable floor angles. Every visible detail on the drawings provided will be included (exceptions may apply, e.g. textured tiles/glass).<br>
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-4d">
+                                <label for="package-info-4d">Modular</label>
+                                <div class="package-info">
+                                    The roof and floors fit together and can be taken apart to view the inside of the structure.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-5d">
+                                <label for="package-info-5d">People</label>
+                                <div class="package-info">
+                                    People models included. Realistically spread according to structure. Optional.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-6d">
+                                <label for="package-info-6d">Furniture</label>
+                                <div class="package-info">
+                                    All major furnishings are modelled with close detail.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-7d">
+                                <label for="package-info-7d">Nature</label>
+                                <div class="package-info">
+                                    All nature elements are modelled with close detail.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-8d">
+                                <label for="package-info-8d">Terrain</label>
+                                <div class="package-info">
+                                    A detailed high-density foam terrain model based on topographic maps provided to us, including recesses for placement of buildings.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-9d">
+                                <label for="package-info-9d">Lighting</label>
+                                <div class="package-info">
+                                    The building will be wired with custom LED lights and our hallmark modular electrical conections. Includes a powerful controller with a custom engraved panel and styled control dials.
+                                </div>
+                            </li>
+                            <li class="tick">
+                                <input type="checkbox" id="package-info-10d">
+                                <label for="package-info-10d">Display Table</label>
+                                <div class="package-info">
+                                    The building will be constructed on a waist-high display table. Includes an explanatory plaque with your brand engraved on it.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="narrow-wrapper">
+                    <h1>Colorisation Options</h1>
+                    <ul id="colorisation-table">
+                        <li class="colorisation-option">
+                            <img src="./img/demo-colorised-1.jpg" alt="Color demo highlighting" class="color-demo-img">
+                            <div class="description">
+                                <h3>Key Features</h3> 
+                                <p>Key features of the model are highlighted in any way imaginable, according to client request.</p>
+                            </div>
+                        </li>
+                        <li class="colorisation-option">
+                            <img src="./img/demo-colorised-2.jpg" alt="Color demo realistic" class="color-demo-img">
+                            <div class="description">
+                                <h3>Realistic</h3> 
+                                <p>All aspects of the design, including furnishings, are painted with realistic coloring.<p>
+                            </div>
+                        </li>
+                        <li class="colorisation-option">
+                            <img src="./img/demo-colorised-3.jpg" alt="Color demo exterior" class="color-demo-img">
+                            <div class="description">
+                                <h3>Exterior Only</h3>
+                                <p>Either of the above options, but only on the outside of the model. This can drastically reduce the cost of rendering.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="v-space">
+                        <noscript>
+                        <small>This won't work.</small>
+                        </noscript>
+                        <button class="cta-btn" onclick="setPanel('navbar-4');">Request a Quote</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="body-panel" id="body-panel-3">
+                <!-- Who we are -->
+                <div class="columns normal-wrapper">
+                    <div class="rows">
+                        <img src="./img/img-001.jpg" width=300>
+                        <div class="contact-block center-margin">
+                        <div class="contact-group">
+                            <div class="icon icon-mail-b" style="font-size: 17pt;"></div>
+                            <div class="contact-info"><a href='m&#97;&#105;lto&#58;e&#110;&#113;uiri&#101;s%&#52;0%68&#115;ar&#99;&#104;&#37;69%74ectu&#114;a&#108;&#46;co%6D&#46;a%75'>en&#113;ui&#114;&#105;&#101;s&#64;hsa&#114;ch&#105;t&#101;&#99;&#116;ur&#97;l&#46;&#99;om&#46;au</a></div>
+                        </div>
+                        <div class="contact-group">
+                            <div class="icon icon-phone2" style="font-size: 16pt;"></div>
+                            <div class="contact-info">1800 123 123</div>
+                        </div>
+                        <div class="contact-group">
+                            <div class="icon icon-office" style="font-size: 16pt;"></div>
+                            <div class="contact-info">13 Hawken Dr<br>
+                                St Lucia QLD 4068<br>
+                                Australia
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div id="about">
+                        <div class="quote">
+                            To see a world in a grain of sand,<br>
+                            and a heaven in a wild flower,<br>
+                            hold infinity in your hand,<br>
+                            and eternity in an hour.
+                            <div class="author">William Blake</div>
+                        </div>
+                        <div>
+                            <p>
+                                Herik &amp; Storey Pty. Ltd. is an Australian design and manufacturing firm focused on bridging the gap between ideas and reality. We use new technologies to provide greatly enhanced design feedback.
+                            </p>
+                            <p>
+                                Constructing a physical, small-scale model makes it possible for architects, engineers and clients alike to appreciate a building’s final form and placement, without pouring any concrete.
+                            </p>
+                            <p>
+                                For an architect, it is important to get it right the first time, before things are set into stone. A building is permanent, but a model is not.
+                            </p>
+                            <p>
+                                With a model, you can explore an unborn world.<br>
+                                Hold infinity in your hand&mdash;and eternity, in an hour.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="scrollthrough"></div>
+            </div>
+
+            <div class="body-panel" id="body-panel-4">
+                <!-- Contact -->
+                <!--
+                    Dance everybody come-on-do-the conga,
+                    You know you-can't-control-yourself any longer.
+                    Dance!
+                -->
+                <div class="narrow-wrapper">
+                    <div class="contact-block center-margin">
+                        <div class="contact-group">
+                            <div class="icon icon-mail-b" style="font-size: 17pt;"></div>
+                            <div class="contact-info"><a href='m&#97;&#105;lto&#58;e&#110;&#113;uiri&#101;s%&#52;0%68&#115;ar&#99;&#104;&#37;69%74ectu&#114;a&#108;&#46;co%6D&#46;a%75'>en&#113;ui&#114;&#105;&#101;s&#64;hsa&#114;ch&#105;t&#101;&#99;&#116;ur&#97;l&#46;&#99;om&#46;au</a></div>
+                        </div>
+                        <div class="contact-group">
+                            <div class="icon icon-phone2" style="font-size: 16pt;"></div>
+                            <div class="contact-info">1800 123 123</div>
+                        </div>
+                        <div class="contact-group">
+                            <div class="icon icon-office" style="font-size: 16pt;"></div>
+                            <div class="contact-info">13 Hawken Dr<br>
+                                St Lucia QLD 4068<br>
+                                Australia
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header-callout">
+                        <div class="overshoot-small"></div>
+                        <h1>Request a Quote</h1>
+                        <span>Let us realise your designs</span>
+                    </div>
+                    <noscript>
+                        <small>This won't work. Send us an email, or enable JavaScript.</small>
+                    </noscript>
+                    <form action="forms/quote-req.php" method="POST" id="request-quote">
+                        <input type="text" required="true" name="name" placeholder="Company Name">
+                        <input type="email" required="true" name="email" placeholder="Email">
+                        <p class="subheading" style="width: 60%;">We will send you a form with further instructions for selecting your desired features, and sending us the files we need.</p>
+                        <button class="form-btn" type="submit">Send</button>
+                    </form>
+
+                    <div class="scrollthrough"></div>
+                    <div class="overshoot"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="./js/main.js"></script>
+
+</html>
